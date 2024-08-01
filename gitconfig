@@ -1,0 +1,16 @@
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[user]
+    email = samyzero465@gmail.com
+    name = "Samy Lahoues"
+
+[color "status"]
+    added = green
+    changed = red bold
+    untracked = magenta bold
+
+[color "branch"]
+    remote = yellow

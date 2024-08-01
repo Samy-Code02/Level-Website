@@ -1,0 +1,122 @@
+/* Start import fornt */
+
+/* End import fornt */
+/* Start Global rules */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --mainColor:#eb4e56;
+    --main-transition-duration:0.3s;
+    --backgroundColor:#f6f9f7;
+    --textColor:#babcba;
+}
+body{
+    font-family: 'Poppins' , sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* End Global rules */
+/* Start medias */
+@media (max-width:390px){
+    .container{
+        width: 360px;
+    }
+}
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px){
+    .container{
+        width: 972px;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        width: 1000px;
+    }
+}
+/* End medias */
+/* Start header */
+header{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color:var(--backgroundColor);
+    box-shadow: 0 0 10px #ddd;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+}
+/*! i symbol form font awesome */
+header .container .logo > a{
+    font-weight: bold;
+    font-size: 1.6em;
+    color: black;
+}
+header .container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    height: 100%;
+    a{
+        display: flex;
+        align-items: center;
+        color: var(--textColor);
+        font-size: 16px;
+        font-weight: 500;
+        position: relative;
+        height: 100%;
+        padding: 0 10px;
+        overflow: hidden;
+        z-index: 1;
+        letter-spacing: 1px;
+        transition: var(--main-transition-duration);
+        -webkit-transition: var(--main-transition-duration);
+        -moz-transition: var(--main-transition-duration);
+        -ms-transition: var(--main-transition-duration);
+        -o-transition: var(--main-transition-duration);
+}
+    a::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        height: 100%;
+        background-color: var(--mainColor);
+}
+/** The choice of header navigation links hover */
+    a:hover{
+        color: white;
+    }
+    a:hover::before{
+        left: 0;
+        transition: var(--main-transition-duration);
+        -webkit-transition: var(--main-transition-duration);
+        -moz-transition: var(--main-transition-duration);
+        -ms-transition: var(--main-transition-duration);
+        -o-transition: var(--main-transition-duration);
+        z-index: -1;
+}
+}
+
+/* End header */
